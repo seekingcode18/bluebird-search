@@ -5,10 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bluebird Search</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bluebird Search</h1>
-  <img src="/assets/images/bluebird.png" alt="bluebird logo">
+  <div class="container">
+    <img src="/assets/images/bluebird.png" alt="bluebird logo" width="160">
+    <h1 class="container__heading">Bluebird Search</h1>
+  </div>
+  <form action="/search" method="GET" class="form">
+    <input type="text" name="query" id="query" class="form__query" placeholder="Search Bluebird now">
+    <input type="submit" value="Search" name="submit" class="form__submit">
+  </form>
 </body>
 </html>
