@@ -1,0 +1,27 @@
+{
+  "name": "bluebird-search",
+  "version": "1.0.0",
+  "description": "custom search engine",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seekingcode18/bluebird-search.git"
+  },
+  "keywords": [
+    "search"
+  ],
+  "author": "cking",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seekingcode18/bluebird-search/issues"
+  },
+  "homepage": "https://github.com/seekingcode18/bluebird-search#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1"
+  }
+}
