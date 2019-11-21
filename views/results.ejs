@@ -4,37 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>#### results from Bluebird</title>
+  <title><%= title %> results from Bluebird</title>
   <link href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/assets/images/favicon.ico">
 </head>
 <body class="body--results">
   <header class="header">
-    <div class="logo--results">
-      <img src="/assets/images/bluebird.png" alt="bluebird logo" width="80" class="results--logo__image">
-      <h2 class="header__heading--h2">Bluebird Search</h2>
-    </div>
+    <a href="/">
+      <div class="logo--results">
+        <img src="/assets/images/bluebird.png" alt="bluebird logo" width="80" class="results--logo__image">
+        <h2 class="header__heading--h2">Bluebird Search</h2>
+      </div>
+    </a>
     <form action="/search" method="GET" class="form--results">
       <input type="text" name="query" id="query" class="form__query" placeholder="Search Bluebird">
       <input type="submit" value="Search" name="submit" class="form__submit">
     </form>
   </header>
   <section class="results">
-    <div class="result">
-      <h3 class="result__heading">BBC News</h3>
-      <p class="result__link"><a class="result__url" href="#">www.bbc.co.uk</a></p>
-      <p class="result__description">This is some info about the BBC news website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident adipisci, sit fugit officiis totam quia cumque quibusdam pariatur, in inventore laboriosam quos iusto commodi! Recusandae dolorum ex incidunt! Adipisci?</p>
-    </div>
-    <div class="result">
-      <h3 class="result__heading">ABC News</h3>
-      <p class="result__link"><a class="result__url" href="#">www.abc.gov.au</a></p>
-      <p class="result__description">This is some info about the ABC news website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident adipisci, sit fugit officiis totam quia cumque quibusdam pariatur, in inventore laboriosam quos iusto commodi! Recusandae dolorum ex incidunt! Adipisci?</p>
-    </div>
-    <div class="result">
-      <h3 class="result__heading">CBS News</h3>
-      <p class="result__link"><a class="result__url" href="#">www.cbs.com</a></p>
-      <p class="result__description">This is some info about the CBS news website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident adipisci, sit fugit officiis totam quia cumque quibusdam pariatur, in inventore laboriosam quos iusto commodi! Recusandae dolorum ex incidunt! Adipisci?</p>
-    </div>
+    <%- results %>
   </section>
 </body>
 </html>
