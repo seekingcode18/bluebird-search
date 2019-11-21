@@ -10,4 +10,7 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => res.render('index.ejs'));
 
+// temporary - DELETE THIS LATER ?!?!?
+app.get('/results', (req, res) => res.render('results.ejs'));
+
 app.listen(port, () => console.log(`Bluebird is listening on port ${port}`));

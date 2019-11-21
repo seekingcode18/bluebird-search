@@ -6,11 +6,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
+.body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #f8f8f8;
   height: 100vh;
   font-family: 'Barlow', sans-serif;
 }
@@ -18,15 +19,23 @@ body {
   text-align: center;
   padding-bottom: 1.6rem;
 }
-.container__heading {
+.header__heading {
   font-size: 42px;
+}
+.header__heading--h2 {
+  font-size: 32px;
 }
 .form__query {
   padding: 8px 18px;
   font-size: 14px;
   border-radius: 16px;
-  border: 2px solid var(--primary);
   width: 300px;
+  border: 1px solid #ababab;
+  box-shadow: 1px 1px 3px #ababab;
+}
+.form__query:active, .form__query:focus {
+  border: 1px solid var(--primary);
+  outline: none;
 }
 .form__submit {
   padding: 10px 24px;
@@ -36,8 +45,88 @@ body {
   margin-left: 1rem;
   cursor: pointer;
   font-weight: 600;
+  border: 1px solid ababab;
+  box-shadow: 1px 1px 3px #ababab;
+}
+.form__submit:active, .form__submit:focus {
+  border: 1px solid var(--primary);
+  outline: none;
 }
 .form__submit:hover {
   background: var(--primary);
   color: #ffffff
+}
+
+/* results.ejs */
+.body--results {
+  height: 100vh;
+  font-family: 'Barlow', sans-serif;
+  background-color: #f8f8f8;
+}
+.header {
+  padding: 1rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  border-bottom: 1px solid var(--primary);
+  box-shadow: 0 0 3px #ababab;
+  width: 100%;
+}
+.logo--results {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.results--logo__image {
+  padding-right: 1rem;
+}
+.results {
+  max-width: 768px;
+  margin: 2rem auto;
+}
+.result {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem 3rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 1px 1px 4px #ababab;
+}
+.result__heading {
+  padding-bottom: 5px;
+}
+.result__link {
+  padding-bottom: 5px;
+}
+.result__url {
+  color: var(--primary);
+  text-decoration: none;
+}
+.result__url:hover {
+  text-decoration: underline;
+}
+.result__description {
+  line-height: 1.3;
+}
+
+@media (max-width: 800px) {
+  .result {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    min-height: 150px;
+  }
+  .logo--results {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  .form--results {
+    display: block;
+  }
 }

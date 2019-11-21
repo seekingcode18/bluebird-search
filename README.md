@@ -10,3 +10,4 @@
 
 ## Methodologies
 * BEM
+* Responsive Design
