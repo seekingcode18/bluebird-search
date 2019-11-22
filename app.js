@@ -23,9 +23,9 @@ app.get('/search', (req, exp_res) => {
   axios.get(`${googleUrl}key=${API_KEY}&cx=${searchEngineID}&q=${userSearchQuery}`)
     .then(ax_res => {
       let searchResults = ax_res.data.items
-      exp_res.render('results.ejs', {results: formatResults(searchResults), title: res.query.query})
+      exp_res.render('results.ejs', {results: formatResults(searchResults)})
     })
-    .catch(error => console.log(`Something seems to have gone wrong! Sorry :(\n${error}`))
+    .catch(error => console.log(`Something seems to have gone wrong :( Sorry!\n${error}`))
 })
 
   function formatResults(incomingArray) {
